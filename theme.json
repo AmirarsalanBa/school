@@ -22,12 +22,17 @@
 					"color": "#333333",
 					"name": "Dark",
 					"slug": "dark"
+				},
+				{
+					"color": "#0E5489",
+					"name": "Dark Blue",
+					"slug": "dark-blue"
 				}
 			]
 		},
 		"layout": {
-			"contentSize": "720px",
-			"wideSize": "1200px"
+			"contentSize": "50rem",
+			"wideSize": "62.5rem"
 		},
 		"spacing": {
 			"units": [
@@ -52,15 +57,54 @@
 						{
 							"fontFamily": "Poppins",
 							"fontStyle": "normal",
-							"fontWeight": "300 700",
+							"fontWeight": "400",
 							"src": [
-								"https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+								"file:./assets/fonts/poppins/poppins-400-normal.woff2"
+							]
+						},
+						{
+							"fontFamily": "Poppins",
+							"fontStyle": "normal",
+							"fontWeight": "500",
+							"src": [
+								"file:./assets/fonts/poppins/poppins-500-normal.woff2"
+							]
+						},
+						{
+							"fontFamily": "Poppins",
+							"fontStyle": "normal",
+							"fontWeight": "600",
+							"src": [
+								"file:./assets/fonts/poppins/poppins-600-normal.woff2"
+							]
+						},
+						{
+							"fontFamily": "Poppins",
+							"fontStyle": "normal",
+							"fontWeight": "700",
+							"src": [
+								"file:./assets/fonts/poppins/poppins-700-normal.woff2"
 							]
 						}
 					],
-					"fontFamily": "'Poppins', sans-serif",
+					"fontFamily": "Poppins, sans-serif",
 					"name": "Poppins",
 					"slug": "poppins"
+				},
+				{
+					"fontFace": [
+						{
+							"fontFamily": "\"PT Serif\"",
+							"fontStyle": "normal",
+							"fontWeight": "700",
+							"src": [
+								"file:./assets/fonts/pt-serif/pt-serif-700-normal.woff2"
+							]
+						}
+					],
+					"fontFamily": "\"PT Serif\", serif",
+					"name": "PT Serif",
+					"slug": "pt-serif"
 				}
 			],
 			"fontSizes": [
@@ -100,7 +144,8 @@
 				},
 				"typography": {
 					"fontSize": "16px",
-					"fontWeight": "bold"
+					"fontStyle": "normal",
+					"fontWeight": "100"
 				}
 			},
 			"core/heading": {
@@ -108,11 +153,85 @@
 					"text": "#333333"
 				},
 				"typography": {
-					"fontSize": "32px",
+					"fontStyle": "normal",
 					"fontWeight": "700",
 					"lineHeight": "1.2"
 				}
 			}
+		},
+		"color": {
+			"text": "var(--wp--preset--color--dark)"
+		},
+		"elements": {
+			"button": {
+				"color": {
+					"background": "var(--wp--preset--color--dark-blue)",
+					"text": "var(--wp--preset--color--white)"
+				},
+				"typography": {
+					"fontFamily": "var(--wp--preset--font-family--poppins)"
+				}
+			},
+			"h1": {
+				"typography": {
+					"fontSize": "3rem"
+				}
+			},
+			"h2": {
+				"typography": {
+					"fontSize": "2.25rem"
+				}
+			},
+			"h3": {
+				"typography": {
+					"fontSize": "1.75rem"
+				}
+			},
+			"h4": {
+				"typography": {
+					"fontSize": "1.5rem"
+				}
+			},
+			"h5": {
+				"typography": {
+					"fontSize": "1.25rem"
+				}
+			},
+			"h6": {
+				"typography": {
+					"fontSize": "1rem"
+				}
+			},
+			"heading": {
+				"typography": {
+					"fontFamily": "var(--wp--preset--font-family--pt-serif)",
+					"fontStyle": "normal",
+					"fontWeight": "700"
+				}
+			},
+			"link": {
+				":hover": {
+					"color": {
+						"text": "var(--wp--preset--color--primary)"
+					}
+				},
+				"color": {
+					"text": "var(--wp--preset--color--dark-blue)"
+				}
+			}
+		},
+		"spacing": {
+			"padding": {
+				"bottom": "0px",
+				"left": "var(--wp--preset--spacing--40)",
+				"right": "var(--wp--preset--spacing--40)",
+				"top": "0px"
+			}
+		},
+		"typography": {
+			"fontFamily": "var(--wp--preset--font-family--poppins)",
+			"fontStyle": "normal",
+			"fontWeight": "400"
 		}
 	},
 	"templateParts": [
