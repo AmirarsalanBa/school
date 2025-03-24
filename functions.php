@@ -11,6 +11,14 @@ function custom_theme_enqueue_styles() {
 		wp_get_theme()->get( 'Version' ),
 		'all'
 	);
+
+    // Load normalize.css
+    wp_enqueue_style( 
+        'school-normalize', 
+        'https://unpkg.com/@csstools/normalize.css', 
+        array(), 
+        '12.1.0'
+    );
 }
 add_action('wp_enqueue_scripts', 'custom_theme_enqueue_styles');
 
