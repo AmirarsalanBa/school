@@ -27,6 +27,11 @@
 					"color": "#0E5489",
 					"name": "Dark Blue",
 					"slug": "dark-blue"
+				},
+				{
+					"color": "#d7efff",
+					"name": "Light Blue",
+					"slug": "light-blue"
 				}
 			]
 		},
