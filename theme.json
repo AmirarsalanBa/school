@@ -32,6 +32,11 @@
 					"color": "#d7efff",
 					"name": "Light Blue",
 					"slug": "light-blue"
+				},
+				{
+					"color": "#cdffea",
+					"name": "Mint",
+					"slug": "mint"
 				}
 			]
 		},
