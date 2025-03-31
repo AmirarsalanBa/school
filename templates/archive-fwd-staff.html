@@ -1,0 +1,29 @@
+<!-- wp:template-part {"slug":"header","tagName":"header"} /-->
+
+<!-- wp:group {"tagName":"main","layout":{"type":"constrained"}} -->
+<main class="wp-block-group"><!-- wp:heading {"level":1} -->
+<h1 class="wp-block-heading">Staff</h1>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Our experienced faculty brings years of hands-on experience in web development and design, ensuring that our students are equipped with cutting-edge skills and knowledge. From user experience designers to back-end engineers, our team covers every facet of web development and design to guide you through your learning journey. The administrative staff is here to provide seamless support, helping you focus on what matters most—mastering the art of coding and creating exceptional digital experiences. Explore below to meet the people who make us a thriving hub for innovation and growth!</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:group {"templateLock":"all","lock":{"move":true,"remove":true},"layout":{"type":"flex","flexWrap":"wrap"}} -->
+<div class="wp-block-group"><!-- wp:query-title {"type":"archive","level":2,"showPrefix":false} /-->
+
+<!-- wp:query {"queryId":7,"query":{"perPage":100,"pages":0,"offset":0,"postType":"fwd-staff","order":"desc","orderBy":"date","author":"","search":"","exclude":[],"sticky":"","inherit":false,"parents":[],"format":[]},"layout":{"contentSize":null,"type":"constrained"}} -->
+<div class="wp-block-query"><!-- wp:post-template {"layout":{"type":"grid","columnCount":2}} -->
+<!-- wp:group {"className":"staff-card","style":{"spacing":{"padding":{"top":"var:preset|spacing|50","bottom":"var:preset|spacing|50","left":"var:preset|spacing|40","right":"var:preset|spacing|40"}}},"backgroundColor":"light-blue"} -->
+<div class="wp-block-group staff-card has-light-blue-background-color has-background" style="padding-top:var(--wp--preset--spacing--50);padding-right:var(--wp--preset--spacing--40);padding-bottom:var(--wp--preset--spacing--50);padding-left:var(--wp--preset--spacing--40)"><!-- wp:post-title {"style":{"elements":{"link":{"color":{"text":"var:preset|color|dark-blue"}}}},"textColor":"dark-blue"} /-->
+
+<!-- wp:post-featured-image {"aspectRatio":"1","width":"","height":"","sizeSlug":"large","style":{"border":{"radius":"100%"}}} /-->
+
+<!-- wp:post-content /--></div>
+<!-- /wp:group -->
+<!-- /wp:post-template --></div>
+<!-- /wp:query --></div>
+<!-- /wp:group --></main>
+<!-- /wp:group -->
+
+<!-- wp:template-part {"slug":"footer","tagName":"footer"} /-->

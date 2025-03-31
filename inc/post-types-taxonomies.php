@@ -110,6 +110,7 @@ function school_register_custom_post_types() {
         'menu_position'      => 5,
         'menu_icon'          => 'dashicons-businessman',
         'supports'           => array( 'title', 'editor', 'thumbnail' ),
+        'template'           => array( array( 'core/image', 'core/paragraph' ) ),
     );
     register_post_type( 'fwd-staff', $args );
 }

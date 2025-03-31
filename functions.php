@@ -33,7 +33,7 @@ add_action( 'after_setup_theme', 'school_setup' );
 * Custom Post Types & Custom Taxonomies
 */
 
-// Change the itle to add student
+// Change the title to add student
 function change_student_title_placeholder($title, $post) {
     if ($post->post_type === 'fwd-students') {
         return 'Add student name';
@@ -41,5 +41,14 @@ function change_student_title_placeholder($title, $post) {
     return $title;
 }
 add_filter('enter_title_here', 'change_student_title_placeholder', 10, 2);
+
+// Change the title to add staff name
+function change_staff_title_placeholder($title, $post) {
+    if ($post->post_type === 'fwd-staff') {
+        return 'Add staff name';
+    }
+    return $title;
+}
+add_filter('enter_title_here', 'change_staff_title_placeholder', 10, 2);
 
 require get_template_directory() . '/inc/post-types-taxonomies.php';
