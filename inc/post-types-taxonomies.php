@@ -55,6 +55,63 @@ function school_register_custom_post_types() {
         'supports'           => array( 'title', 'editor', 'thumbnail' ),
     );
     register_post_type( 'fwd-students', $args );
+
+
+    $labels = array(
+        'name'                     => _x( 'staff', 'post type general name', 'school' ),
+        'singular_name'            => _x( 'staff', 'post type singular name', 'school' ),
+        'add_new'                  => _x( 'Add New', 'staff', 'school' ),
+        'add_new_item'             => __( 'Add New staff', 'school' ),
+        'edit_item'                => __( 'Edit staff', 'school' ),
+        'new_item'                 => __( 'New staff', 'school' ),
+        'view_item'                => __( 'View staff', 'school' ),
+        'view_items'               => __( 'View staff', 'school' ),
+        'search_items'             => __( 'Search staff', 'school' ),
+        'not_found'                => __( 'No staff found.', 'school' ),
+        'not_found_in_trash'       => __( 'No staff found in Trash.', 'school' ),
+        'parent_item_colon'        => __( 'Parent staff:', 'school' ),
+        'all_items'                => __( 'All staff', 'school' ),
+        'archives'                 => __( 'staff Archives', 'school' ),
+        'attributes'               => __( 'staff Attributes', 'school' ),
+        'insert_into_item'         => __( 'Insert into staff', 'school' ),
+        'uploaded_to_this_item'    => __( 'Uploaded to this staff', 'school' ),
+        'featured_image'           => __( 'staff featured image', 'school' ),
+        'set_featured_image'       => __( 'Set staff featured image', 'school' ),
+        'remove_featured_image'    => __( 'Remove staff featured image', 'school' ),
+        'use_featured_image'       => __( 'Use as featured image', 'school' ),
+        'menu_name'                => _x( 'staff', 'admin menu', 'school' ),
+        'filter_items_list'        => __( 'Filter staff list', 'school' ),
+        'items_list_navigation'    => __( 'staff list navigation', 'school' ),
+        'items_list'               => __( 'staff list', 'school' ),
+        'item_published'           => __( 'staff published.', 'school' ),
+        'item_published_privately' => __( 'staff published privately.', 'school' ),
+        'item_revereted_to_draft'  => __( 'staff reverted to draft.', 'school' ),
+        'item_trashed'             => __( 'staff trashed.', 'school' ),
+        'item_scheduled'           => __( 'staff scheduled.', 'school' ),
+        'item_updated'             => __( 'staff updated.', 'school' ),
+        'item_link'                => __( 'staff link.', 'school' ),
+        'item_link_description'    => __( 'A link to a staff.', 'school' ),
+    );
+
+    $args = array(
+        'labels'             => $labels,
+        'public'             => true,
+        'publicly_queryable' => true,
+        'show_ui'            => true,
+        'show_in_menu'       => true,
+        'show_in_nav_menus'  => true,
+        'show_in_admin_bar'  => true,
+        'show_in_rest'       => true,
+        'query_var'          => true,
+        'rewrite'            => array( 'slug' => 'staff' ),
+        'capability_type'    => 'post',
+        'has_archive'        => true,
+        'hierarchical'       => false,
+        'menu_position'      => 5,
+        'menu_icon'          => 'dashicons-archive',
+        'supports'           => array( 'title', 'editor', 'thumbnail' ),
+    );
+    register_post_type( 'fwd-staff', $args );
 }
 add_action( 'init', 'school_register_custom_post_types' );
 
@@ -93,6 +150,41 @@ function school_register_taxonomies() {
         'rewrite'           => array( 'slug' => 'speciality-categories' ),
     );
     register_taxonomy( 'fwd-speciality-category', array( 'fwd-students' ), $args );
+
+    // staff occupation
+    $labels = array(
+        'name'                  => _x( 'Occupation Categories', 'taxonomy general name', 'mindset-theme' ),
+        'singular_name'         => _x( 'Occupation Category', 'taxonomy singular name', 'mindset-theme' ),
+        'search_items'          => __( 'Search Occupation Categories', 'mindset-theme' ),
+        'all_items'             => __( 'All Occupation Category', 'mindset-theme' ),
+        'parent_item'           => __( 'Parent Occupation Category', 'mindset-theme' ),
+        'parent_item_colon'     => __( 'Parent Occupation Category:', 'mindset-theme' ),
+        'edit_item'             => __( 'Edit Occupation Category', 'mindset-theme' ),
+        'view_item'             => __( 'View Occupation Category', 'mindset-theme' ),
+        'update_item'           => __( 'Update Occupation Category', 'mindset-theme' ),
+        'add_new_item'          => __( 'Add New Occupation Category', 'mindset-theme' ),
+        'new_item_name'         => __( 'New Occupation Category Name', 'mindset-theme' ),
+        'template_name'         => __( 'Occupation Category Archives', 'mindset-theme' ),
+        'menu_name'             => __( 'Occupation Category', 'mindset-theme' ),
+        'not_found'             => __( 'No Occupation categories found.', 'mindset-theme' ),
+        'no_terms'              => __( 'No Occupation categories', 'mindset-theme' ),
+        'items_list_navigation' => __( 'Occupation Categories list navigation', 'mindset-theme' ),
+        'items_list'            => __( 'Occupation Categories list', 'mindset-theme' ),
+        'item_link'             => __( 'Occupation Category Link', 'mindset-theme' ),
+        'item_link_description' => __( 'A link to a occupation category.', 'mindset-theme' ),
+    );
+    $args = array(
+        'hierarchical'      => true,
+        'labels'            => $labels,
+        'show_ui'           => true,
+        'show_in_menu'      => true,
+        'show_in_nav_menu'  => true,
+        'show_in_rest'      => true,
+        'show_admin_column' => true,
+        'query_var'         => true,
+        'rewrite'           => array( 'slug' => 'occupation-categories' ),
+    );
+    register_taxonomy( 'fwd-occupation-category', array( 'fwd-staff' ), $args );
 }
 add_action( 'init', 'school_register_taxonomies' );
 
