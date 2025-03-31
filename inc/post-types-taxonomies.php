@@ -108,7 +108,7 @@ function school_register_custom_post_types() {
         'has_archive'        => true,
         'hierarchical'       => false,
         'menu_position'      => 5,
-        'menu_icon'          => 'dashicons-archive',
+        'menu_icon'          => 'dashicons-businessman',
         'supports'           => array( 'title', 'editor', 'thumbnail' ),
     );
     register_post_type( 'fwd-staff', $args );
@@ -151,27 +151,27 @@ function school_register_taxonomies() {
     );
     register_taxonomy( 'fwd-speciality-category', array( 'fwd-students' ), $args );
 
-    // staff occupation
+    // staff faculty
     $labels = array(
-        'name'                  => _x( 'Occupation Categories', 'taxonomy general name', 'mindset-theme' ),
-        'singular_name'         => _x( 'Occupation Category', 'taxonomy singular name', 'mindset-theme' ),
-        'search_items'          => __( 'Search Occupation Categories', 'mindset-theme' ),
-        'all_items'             => __( 'All Occupation Category', 'mindset-theme' ),
-        'parent_item'           => __( 'Parent Occupation Category', 'mindset-theme' ),
-        'parent_item_colon'     => __( 'Parent Occupation Category:', 'mindset-theme' ),
-        'edit_item'             => __( 'Edit Occupation Category', 'mindset-theme' ),
-        'view_item'             => __( 'View Occupation Category', 'mindset-theme' ),
-        'update_item'           => __( 'Update Occupation Category', 'mindset-theme' ),
-        'add_new_item'          => __( 'Add New Occupation Category', 'mindset-theme' ),
-        'new_item_name'         => __( 'New Occupation Category Name', 'mindset-theme' ),
-        'template_name'         => __( 'Occupation Category Archives', 'mindset-theme' ),
-        'menu_name'             => __( 'Occupation Category', 'mindset-theme' ),
-        'not_found'             => __( 'No Occupation categories found.', 'mindset-theme' ),
-        'no_terms'              => __( 'No Occupation categories', 'mindset-theme' ),
-        'items_list_navigation' => __( 'Occupation Categories list navigation', 'mindset-theme' ),
-        'items_list'            => __( 'Occupation Categories list', 'mindset-theme' ),
-        'item_link'             => __( 'Occupation Category Link', 'mindset-theme' ),
-        'item_link_description' => __( 'A link to a occupation category.', 'mindset-theme' ),
+        'name'                  => _x( 'Faculty Categories', 'taxonomy general name', 'mindset-theme' ),
+        'singular_name'         => _x( 'Faculty Category', 'taxonomy singular name', 'mindset-theme' ),
+        'search_items'          => __( 'Search Faculty Categories', 'mindset-theme' ),
+        'all_items'             => __( 'All Faculty Category', 'mindset-theme' ),
+        'parent_item'           => __( 'Parent Faculty Category', 'mindset-theme' ),
+        'parent_item_colon'     => __( 'Parent Faculty Category:', 'mindset-theme' ),
+        'edit_item'             => __( 'Edit Faculty Category', 'mindset-theme' ),
+        'view_item'             => __( 'View Faculty Category', 'mindset-theme' ),
+        'update_item'           => __( 'Update Faculty Category', 'mindset-theme' ),
+        'add_new_item'          => __( 'Add New Faculty Category', 'mindset-theme' ),
+        'new_item_name'         => __( 'New Faculty Category Name', 'mindset-theme' ),
+        'template_name'         => __( 'Faculty Category Archives', 'mindset-theme' ),
+        'menu_name'             => __( 'Faculty Category', 'mindset-theme' ),
+        'not_found'             => __( 'No Faculty categories found.', 'mindset-theme' ),
+        'no_terms'              => __( 'No Faculty categories', 'mindset-theme' ),
+        'items_list_navigation' => __( 'Faculty Categories list navigation', 'mindset-theme' ),
+        'items_list'            => __( 'Faculty Categories list', 'mindset-theme' ),
+        'item_link'             => __( 'Faculty Category Link', 'mindset-theme' ),
+        'item_link_description' => __( 'A link to a faculty category.', 'mindset-theme' ),
     );
     $args = array(
         'hierarchical'      => true,
@@ -182,9 +182,9 @@ function school_register_taxonomies() {
         'show_in_rest'      => true,
         'show_admin_column' => true,
         'query_var'         => true,
-        'rewrite'           => array( 'slug' => 'occupation-categories' ),
+        'rewrite'           => array( 'slug' => 'faculty-categories' ),
     );
-    register_taxonomy( 'fwd-occupation-category', array( 'fwd-staff' ), $args );
+    register_taxonomy( 'fwd-faculty-category', array( 'fwd-staff' ), $args );
 }
 add_action( 'init', 'school_register_taxonomies' );
 
