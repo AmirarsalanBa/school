@@ -19,6 +19,28 @@ function custom_theme_enqueue_styles() {
         array(), 
         '12.1.0'
     );
+
+    // enqueue aos
+    wp_enqueue_style(
+        'aos-css',
+        'https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css',
+        array(),
+        '2.3.4'
+    );
+    wp_enqueue_script(
+        'aos-js',
+        'https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css',
+        array(),
+        '2.3.4',
+        array( 'strategy' => 'defer' )
+    );
+    wp_enqueue_script(
+        'aos-init',
+        get_template_directory_uri() . '/assets/js/aos-init.js',
+        array('aos-js'),
+        '1.0',
+        array( 'strategy' => 'defer' )
+    );
 }
 add_action('wp_enqueue_scripts', 'custom_theme_enqueue_styles');
 
@@ -50,5 +72,10 @@ function change_staff_title_placeholder($title, $post) {
     return $title;
 }
 add_filter('enter_title_here', 'change_staff_title_placeholder', 10, 2);
+
+function fwd_blocks_register_blocks() {
+    register_block_type(get_template_directory() . '/school-aos/build');
+}
+add_action('init', 'fwd_blocks_register_blocks');
 
 require get_template_directory() . '/inc/post-types-taxonomies.php';
