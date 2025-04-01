@@ -104,9 +104,10 @@ function change_staff_title_placeholder($title, $post) {
 }
 add_filter('enter_title_here', 'change_staff_title_placeholder', 10, 2);
 
-function fwd_blocks_register_blocks() {
-    register_block_type(get_template_directory() . '/school-aos/build');
+// aos
+function school_aos_register_block() {
+    register_block_type(get_template_directory() . '/school-aos/build/school-aos');
 }
-add_action('init', 'fwd_blocks_register_blocks');
+add_action('init', 'school_aos_register_block');
 
 require get_template_directory() . '/inc/post-types-taxonomies.php';

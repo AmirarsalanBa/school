@@ -11,8 +11,7 @@ import { __ } from '@wordpress/i18n';
  *
  * @see https://developer.wordpress.org/block-editor/reference-guides/packages/packages-block-editor/#useblockprops
  */
-import { useBlockProps } from '@wordpress/block-editor';
-
+import { useBlockProps, InnerBlocks } from '@wordpress/block-editor';
 import { InspectorControls } from '@wordpress/block-editor';
 import { PanelBody, SelectControl } from '@wordpress/components';
 
@@ -44,7 +43,7 @@ export default function Edit({ attributes, setAttributes }) {
             </InspectorControls>
 
             <div {...useBlockProps()} data-aos={attributes.animation || 'fade-up'}>
-                <InnerBlocks />
+                <InnerBlocks defaultBlock={'core/paragraph'} />
             </div>
         </>
 	);

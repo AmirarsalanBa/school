@@ -24,7 +24,6 @@ return array(
 		),
 		'textdomain' => 'school-aos',
 		'editorScript' => 'file:./index.js',
-		'editorStyle' => 'file:./index.css',
 		'style' => 'file:./style-index.css'
 	)
 );
